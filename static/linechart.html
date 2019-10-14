@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lumen/bootstrap.min.css">
+</head>
+
+<body>
+  <!-- Start of Nav Bar-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="/"><img alt="Percentage of Low Birth Weight Babies"
+              title="Percentage of Low Birth Weight Babies" width=60 class="img-fluid img-thumbnail"
+              src="./images/logo.png"></a>
+
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Project 2: Percent of Low Birth Weights</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="linechart">Line: Counties, State and US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="choropleth">Choropleth: Counties Over Time</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="errorbar">Bar: Averages with Min & Max</a>
+            </li>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- End of Nav Bar-->
+
+  <!-- Plotly chart will be drawn inside this DIV -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mt-5 jumbotron">
+        <div id="myDiv"></div>
+        <div class="col-md-12">
+          <p>
+            This multiline chart shows the low birth weights relative to other surrounding counties, both the states of Oregon and 
+            Washington as a whole, and also in relation to the United States as a whole. Mouse over the graph for specific numbers by year.
+          </p>
+          <h1>Observations</h1>
+          <p>
+            Some immediate observations as the graph loads with all the data graphed is that Skamania county is highly variable, 
+            having the lowest minimum and highest maximum in the dataset. A potential answer for this swing can easily be ascribed 
+            to Skamania having the lowest population in comparison to the rest of the data (assuming we didn't have access to the underlying datasets for each of these aggregates, a simple internet search shows this to
+            be the case). More datapoints, in this case low birthweight babies, give for larger variation, while more datapoints give a smoother line from year to year.
+            Hence why the United States line is the smoothest of all the lines on this graph. Can you think of a potential other reason why 
+            the lines might vary from year to year more wildly that is not encompassed in population?
+          </p>
+          <p>
+            If you focus in on just the Washington, Oregon, and United States lines (by clicking the legend), you can immediately notice
+            a few things:
+            <ul>
+              <li>Oregon and Washington both are significantly lower than the US as a whole.</li>
+              <li>Though Oregon and Washington are both lower than the US, they do roughly seem to mirror the US trend.</li>
+              <li>There is a peak in the US data in 2006 that is also reflected in the Oregon data, but not Washington.</li>
+              <li>Though there is some variation between Washington and Oregon, a noticable trend is seen as they both trend up together.</li>              
+            </ul>
+            What could account for the peak and spike in 2006 in the US and Oregon data but not in Washington? Why would Washington and Oregon follow each other in such a visually correlated way? How 
+            could we determine if the factors involved in both states are mostly the same?
+          </p>
+          <p>
+            Do you see anything that interests you in this data as presented? Are there any more questions we should ask of this graph?
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Clickable Visualization Thumbnails (Right Side) -->
+  <!-- <div class="col-md-6">
+    <section id="visualizations">
+      <h2 class="visualization-header">Visualizations</h2>
+      <div id="three_visualizations">
+        <!-- Choropleth Thumbnail -->
+  <!-- <a href="choropleth.html"><img src="./images/choropleth.png"
+            alt="Low Birth Weight Percentage: Counties Over Time (1998-2015)"
+            class="img-thumbnail">
+            <br>Low Birth Weight Percentage: Counties Over Time (1998-2015)</a>
+        <!-- Line Chart Thumbnail -->
+  <!-- <br><br><a href="linechart.html"><img src="./images/linechart.png" alt="Low Birth Weight Percentage: Counties, State, US"
+            class="img-thumbnail">
+            <br>Low Birth Weight Percentage: Counties, State, US</a> -->
+  <!-- Error Bar Bar Chart Thumbnail -->
+  <!-- <br><br><a href="errorbar.html"><img src="./images/errorbars.png" alt="Average Low Birth Weight Percentage: Counties"
+            class="img-thumbnail">
+          <br>Average Low Birth Weight Percentage: Counties</a>
+      </div> -->
+  <!-- </section> -->
+  <!-- </div> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+   crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+   crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+   crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="js/linechart.js"></script>
+</body>
+
+</html>

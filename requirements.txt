@@ -1,0 +1,7 @@
+psycopg2
+flask
+matplotlib
+numpy
+pandas
+requests
+sqlalchemy

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <!----------- Update ----------->
+  <title>1998-2015 Percentage of Low Birth Rate Babies (Less Than 2,500 Grams) by County, Portland Metropolitan Area and US</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lumen/bootstrap.min.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  
+  <!-- Start of Nav Bar-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="/"><img alt="Percentage of Low Birth Weight Babies"
+              title="Percentage of Low Birth Weight Babies" width=60 class="img-fluid img-thumbnail"
+              src="./images/logo.png"></a>
+
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Project 2: Percent of Low Birth Weights</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="linechart">Line: Counties, State and US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="choropleth">Choropleth: Counties Over Time</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="errorbar">Bar: Averages with Min & Max</a>
+            </li>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- End of Nav Bar-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mt-5 jumbotron">
+    
+          <h2 class="Header">County, State and US Comparison with Min & Max Values</h2>
+          
+          <!-- Update -->
+          <div id="plot"></div>
+            <script src="js/errorbar.js"></script>
+          
+            <!-- Add observations -->
+          
+          <h4><p>This visualization charts the means for county, state, and US low birth weight percentages from 1998 to 2015. Included are the minimum and maximum values.</p></h4>
+          <br>
+          <h5>Observations</h5>
+          <p>
+            <ul>
+              <li>Immediately noticable is the fact that the averages over the 18 year period all (except the US data) cluster around the 6 percent line.</li>
+              <li>Similar to what we saw with the choropleth map, Washington county and Multnomah county seem to share a minimum but not an mean or maximum.</li>
+              <li>Portland Metropolitan area and surrounding counties and also including the two states as a whole are not bring up the US average.</li>
+            </ul>
+            If you followed along, are there any areas of inquery that you might want to add or explore based on what was shown today? What other data might be useful to pair 
+            against the data we currently have up here? And if you did follow along, did the observations and questions posed bias your thinking in a direction unfairly or without warrant or merit?
+            If yes, why?
+          </p>
+          
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+</body>
+
+</html>

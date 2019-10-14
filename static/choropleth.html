@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Birth Weight Choropleth</title>
+
+  <!-- Leaflet CSS & JS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lumen/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+
+  <!-- d3 JavaScript -->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="./css/cp_style.css">
+</head>
+
+<body>
+  <!-- Start of Nav Bar-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="/"><img alt="Percentage of Low Birth Weight Babies"
+              title="Percentage of Low Birth Weight Babies" width=60 class="img-fluid img-thumbnail"
+              src="./images/logo.png"></a>
+
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Project 2: Percent of Low Birth Weights</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="linechart">Line: Counties, State and US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="choropleth">Choropleth: Counties Over Time</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="errorbar">Bar: Averages with Min & Max</a>
+            </li>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- End of Nav Bar-->
+
+  <!-- Header With Project Title -->
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12 mt-5 jumbotron">
+        <h1 class="display-5">Counties Over Time</h1>
+        <hr class="my-4">
+
+        <!-- The div where we will inject our map -->
+        <div id="map"></div>
+
+        <div class='map-overlay top'>
+          <div class='map-overlay-inner'>
+            <label id='year'>1998</label>
+            <input id='slider' type='range' min='0' max='17' step='1' value='0' />
+          </div>
+          <div class='map-overlay-inner'>
+            <div id='legend' class='legend'>
+              <div><div>0</span><div style="float:right">10</div></div>
+              <div class='bar'></div>
+              <div>% of babies born under weight</div>
+            </div>
+          </div>
+        </div>
+        
+        <br style="clear:both">
+      </div>
+  
+    </div>
+    <div class="col-md-12">
+        <p>
+          Choropleth maps allow you to see the specific counties that are next to one another 
+          through time. As you slide the bar, you can see visually if there may be relationships 
+          between counties that might have to do with environmental factors or may indicate regional 
+          or legal similarities that are different than other counties. As you click on each county plot 
+          a popup will give more detailed data for that county.
+        </p>
+        <h1>Observations</h1>
+        <p>
+          A couple observations:
+          <ul>
+            <li>While there seems to be little consistency between adjacent counties, Washington county and Multnomah county seem to be closely related.</li>
+            <li>Though not adjacent (separated by Clark county which includes Vancouver), Columbia county and Skamania county seem to change in step.</li>            
+          </ul>
+          While Skamania and Columbia are not connected to each other, they do both share a large section of their county line with the Columbia river. With Vancouver separating them, 
+          could there be a connection from a shared water source? Would Clark county by not mirroring them imply that there is no connection? Or could there be 
+          a difference in how each county deals with water that might account for this difference? What other maps might be useful to underlay the data?
+        </p>
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.0.6/chroma.min.js"></script>
+  <script type="text/javascript" src="./js/config.js"></script>
+  <script type="text/javascript" src="./js/cp_logic.js"></script>
+
+</body>
+
+</html>
