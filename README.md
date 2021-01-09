@@ -46,12 +46,6 @@ For this study, low birth weights were defined as any weight less than 2,500 gra
 
 The purpose of this presentation is to explore the aggregated low birth weight data by county, state, and country to answer one main question: In what way is this data useful? We embark on an exploration to both observe trends and ask questions of those observations to determine if some of the observations can be explained by simple or obvious reasons, or if the observations are telling us something new and insightful. Another reason for exploration of the data is also to see if the data shows where knowledge is lacking and can launch new inqueries into other datasets that may help suss out a more nuanced understanding of the specific causes of low birth weight surrounding the Portland Metropolitan area.
 
-##### Observations and Questions
-
-As you progress through the website using the links at the top or the pictures of the graphs on the side, we will state some observations based on the charts and graphs and pose some questions. If you have questions or observations of your own, please feel free to explore on you own.
-
-</div>
-
 <div class="col-md-6">
 
 <section id="visualizations">
@@ -76,4 +70,3 @@ Bar: Averages with Min & Max
 
 </div>
 
-</div>
